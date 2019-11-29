@@ -1,0 +1,3 @@
+interface IStepValid {
+    checkValid(): boolean;
+}
