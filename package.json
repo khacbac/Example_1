@@ -28,8 +28,10 @@
     "@types/react-native": "^0.57.58",
     "babel-jest": "^24.8.0",
     "babel-loader": "^8.0.6",
+    "detox": "^14.8.3",
     "jest": "^24.8.0",
     "metro-react-native-babel-preset": "^0.54.0",
+    "mocha": "^6.2.2",
     "react-dom": "16.8.3",
     "react-native-typescript-transformer": "^1.2.12",
     "react-test-renderer": "16.8.3",
@@ -37,5 +39,18 @@
   },
   "jest": {
     "preset": "react-native"
+  },
+  "detox": {
+    "configurations": {
+      "ios.sim.debug": {
+        "binaryPath": "ios/build/Build/Products/Debug-iphonesimulator/Example_1_20190509.app",
+        "build": "xcodebuild -project ios/Example_1_20190509.xcodeproj -scheme Example_1_20190509 -configuration Debug -sdk iphonesimulator -derivedDataPath ios/build",
+        "type": "ios.simulator",
+        "device": {
+          "type": "iPhone X"
+        }
+      }
+    },
+    "test-runner": "mocha"
   }
 }

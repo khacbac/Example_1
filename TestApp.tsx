@@ -8,6 +8,7 @@ import {
     FlatList,
     ScrollView,
     Dimensions,
+    SafeAreaView,
 } from 'react-native';
 import LocationView, { LocationViewState } from './wizard1/LocationView';
 import SubmitView from './wizard1/SubmitView';
@@ -294,15 +295,17 @@ export default class TestApp extends React.Component<Props, State> {
     render() {
 
         return (
-            <View style={styles.container}>
+            <SafeAreaView style={styles.container}>
                 {this._renderTopBar()}
+
+                <Text testID="MyUniqueId123"></Text>
 
                 <View style={{
                     flex: 1
                 }}>
                     {this._renderStep()}
                 </View>
-            </View>
+            </SafeAreaView>
         );
     }
 }

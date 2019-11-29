@@ -7,7 +7,7 @@ import React from "react-native";
 // import App from "./App";
 import { name as appName } from "./app.json";
 import TestApp from "./TestApp";
-import StorybookUIRoot from './storybook';
+// import StorybookUIRoot from "./storybook/StorybookUIRoot";
 
 
-AppRegistry.registerComponent(appName, () => StorybookUIRoot);
+AppRegistry.registerComponent(appName, () => TestApp);
